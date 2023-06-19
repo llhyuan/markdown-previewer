@@ -21,9 +21,13 @@ function App() {
   );
 
   useEffect(() => {
-    fetch('../public/example.md')
-      .then((res) => res.text())
-      .then((res) => setTextContext(res));
+    import('./assets/example.md').then((res) => {
+      fetch(res.default)
+        .then((res) => {
+          return res.text();
+        })
+        .then((res) => setTextContext(res));
+    });
   }, []);
 
   useEffect(() => {
@@ -66,14 +70,16 @@ function Container({ children, title }) {
       <div className='flex bg-[#4BA3A3] border-black border-solid border-[1px] border-b-0 py-1 px-2 text-[1.25rem] font-bold'>
         <span className='font-mono mr-2'>&lt;/&gt;</span>
         <span className='mr-auto'>{title}</span>
-        <a href={title === 'Editor' ? '#editor':'#preview'} className=''><span
-          className='material-symbols-outlined relative top-[0.2rem] cursor-pointer hover:scale-110 transition-transform ease-in duration-200'
-          onClick={() => {
-            setFullScreen(!fullScreen);
-          }}
-        >
-          open_in_full
-        </span></a>
+        <a href={title === 'Editor' ? '#editor' : '#preview'} className=''>
+          <span
+            className='material-symbols-outlined relative top-[0.2rem] cursor-pointer hover:scale-110 transition-transform ease-in duration-200'
+            onClick={() => {
+              setFullScreen(!fullScreen);
+            }}
+          >
+            open_in_full
+          </span>
+        </a>
       </div>
       <div
         className={
