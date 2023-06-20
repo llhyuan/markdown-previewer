@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-html{
+html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
 
@@ -39,14 +37,12 @@ p {
 
 code {
   color: darkred;
-  font-family: "Fira Mono";
 }
 pre {
   overflow-x: scroll;
-  font-family: 'Fira Mono';
 }
 del {
-  display:inline-block;
+  display: inline-block;
   text-decoration: line-through;
 }
 a {
@@ -57,18 +53,18 @@ a {
 blockquote {
   margin-left: 2rem;
   padding-left: 5px;
-  border-left: 4px solid #6E4C9B;
-  color: #6E4C9B;
-  p {
-    margin: 0;
-  }
+  border-left: 4px solid #6e4c9b;
+  color: #6e4c9b;
+}
+blockquote p {
+  margin: 0;
 }
 table {
   border: 1px solid black;
   border-collapse: collapse;
   margin: 1.25rem 0;
   text-align: center;
-  vertical-align:center;
+  vertical-align: center;
 }
 th,
 td {
