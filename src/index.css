@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 html{
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+
+  --editor-width: 497px;
+  --preview-width: 65%;
 }
 
 h1 {
@@ -31,14 +36,18 @@ h3 {
 p {
   margin: 1rem 0;
 }
+
 code {
-  background-color: #1A1B26;
-  padding: 2px;
-  font-weight: bold;
-  color: #FF9D64;
+  color: darkred;
+  font-family: "Fira Mono";
 }
 pre {
   overflow-x: scroll;
+  font-family: 'Fira Mono';
+}
+del {
+  display:inline-block;
+  text-decoration: line-through;
 }
 a {
   color: purple;
@@ -50,15 +59,20 @@ blockquote {
   padding-left: 5px;
   border-left: 4px solid #6E4C9B;
   color: #6E4C9B;
+  p {
+    margin: 0;
+  }
 }
 table {
-  border: 2px solid black;
+  border: 1px solid black;
   border-collapse: collapse;
   margin: 1.25rem 0;
+  text-align: center;
+  vertical-align:center;
 }
 th,
 td {
-  border: 2px solid black;
+  border: 1px solid black;
   text-align: center;
   padding: 0.25rem 0.5rem;
 }
@@ -70,20 +84,20 @@ ul {
 }
 ul ul {
   margin-left: 1rem;
-  list-style: square;
+  list-style: disc;
 }
 ul ul ul {
-  list-style: circle;
+  list-style: disc;
 }
 ul ul ul ul {
-  list-style: '- ';
+  list-style: none;
 }
 ol {
-  list-style: number;
+  list-style: decimal;
   margin-left: 1rem;
   margin-bottom: 1rem;
 }
 ol ol {
   margin-left: 1rem;
-  list-style: lower-roman;
+  list-style: upper-alpha;
 }
