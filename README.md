@@ -9,6 +9,8 @@ Mark-It-Down allows you to write/edit and preview markdown in real time. You can
 - Upload markdown file to edit, instead of having to paste the content in the editor.
 - Offer more pdf formating options.
 
+## Table of Content
+
 - [About](#about)
   - [Features](#features)
   - [Links](#links)
